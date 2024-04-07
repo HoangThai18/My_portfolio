@@ -1,0 +1,14 @@
+:root {
+  --primary-color: #58a9ff;
+  --secondary-color: linear-gradient(
+    to right,
+    #566dfe 0%,
+    #caa5de 70%,
+    #db98ff 100%
+  );
+  --white-color: #ffffff;
+  --text-title-color: #171717;
+  --hover-color-primary: #e2f0f9;
+  --box-shadow-color: rgba(0, 0, 0, 0.5);
+  --color-custom: var(--color-custom);
+}

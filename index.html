@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css" />
+    <link
+      rel="stylesheet"
+      href='https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Poppins:wght@100;300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap"rel="stylesheet' />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./stylesheet/styles.css" />
+  </head>
+  <body>
+    <div id="popUpSelect" onclick="hidePopUp()">
+      <div class="fake-popup">
+        <div
+          id="popUpContainer"
+          class="popup-container"
+          onclick="event.stopPropagation()">
+          <i class="fa-solid fa-xmark" onclick="hidePopUp()"></i>
+          <i class="fa-solid fa-eye"></i>
+          <div class="title-sec">
+            <p>Lựa chọn để xem source code hoặc xem trang web</p>
+            <strong class="massage-project"></strong>
+          </div>
+          <div class="sec-btn-link">
+            <a
+              id="githubLink"
+              href=""
+              onclick="showPopUpAndSetLinks()"
+              class="btn-website"
+              target="_blank">
+              <div class="btn-name">
+                <i class="fa-brands fa-github"></i>
+                <p>Code Github</p>
+              </div></a
+            ><a
+              id="webLink"
+              href=""
+              onclick="showPopUpAndSetLinks()"
+              class="btn-webhost"
+              target="_blank">
+              <div class="btn-name">
+                <i class="fa-solid fa-earth-americas"></i>
+                <p>Web Preview</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-up-btn">
+      <i class="fas fa-angle-up"></i>
+    </div>
+    <!-- Header -->
+    <nav id="secNavbar" class="navbar">
+      <div class="max-width">
+        <div class="logo">
+          <a href="#">Phan Hoang Thai</a>
+        </div>
+        <ul class="menu">
+          <li class="item-menu">
+            <a href="#home" class="menu-btn"><strong>Home</strong></a>
+          </li>
+          <li class="item-menu">
+            <a href="#about" class="menu-btn"><strong>About</strong></a>
+          </li>
+          <li class="item-menu">
+            <a href="#education" class="menu-btn"><strong>Education</strong></a>
+          </li>
+          <li class="item-menu">
+            <a href="#project" class="menu-btn"><strong>Projects</strong></a>
+          </li>
+          <li class="item-menu">
+            <a href="#skills" class="menu-btn"><strong>Skills</strong></a>
+          </li>
+        </ul>
+        <div class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+    <!-- Home -->
+    <section class="home" id="home">
+      <div class="max-width">
+        <div class="home-content animate__animated animate__zoomIn">
+          <div class="text-one">Hello, This is</div>
+          <div class="text-two">My Portfolio</div>
+          <div class="text-three">And I'm a <span class="typing"></span></div>
+          <a href="#" class="btn" id="downloadBtn" onclick="openNewWindow()"
+            >Download</a
+          >
+          <div class="social-menu">
+            <ul>
+              <li class="item-menu-social">
+                <a href="https://github.com/HoangThai18"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </li>
+              <li class="item-menu-social">
+                <a href="https://www.linkedin.com/in/th%C3%A1i-phan-01363b217/"
+                  ><i class="fa-brands fa-linkedin-in"></i
+                ></a>
+              </li>
+              <li class="item-menu-social">
+                <a href="https://www.instagram.com/hoangthai.187"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
+              <li class="item-menu-social">
+                <a href="https://www.facebook.com/thaine1807"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+              </li>
+              <li class="item-menu-social">
+                <a href="#"><i class="fa-solid fa-graduation-cap"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="cus-avatar animate__animated animate__zoomIn"></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="max-width">
+        <h2 class="title"><p class="about-me">ABOUT ME</p></h2>
+        <div class="about-content">
+          <div class="column left">
+            <div class="card-container">
+              <div class="card">
+                <img src="./asset/pic.jpg" alt="Your Name" class="avatar" />
+                <div class="info">
+                  <h2>Phan Hoàng Thái</h2>
+                  <p>18-07-2001</p>
+                  <p>Programmer</p>
+                  <p>phanthai18072001@gamil.com</p>
+                  <p>+84 969028293</p>
+                  <div class="social-icons-card">
+                    <a href="https://twitter.com/yourname">
+                      <img
+                        src="https://cdn-icons-png.freepik.com/256/3670/3670151.png?ga=GA1.1.883141433.1699280251"
+                        alt="Twitter"
+                    /></a>
+                    <a href="https://linkedin.com/in/yourname">
+                      <img
+                        src="https://cdn-icons-png.freepik.com/256/3536/3536569.png?ga=GA1.1.883141433.1699280251&semt=ais"
+                        alt="LinkedIn"
+                    /></a>
+                    <a href="https://github.com/yourname">
+                      <img
+                        src="https://cdn-icons-png.freepik.com/256/3291/3291695.png?ga=GA1.1.883141433.1699280251&semt=ais"
+                        alt="GitHub"
+                    /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column right">
+            <div class="text">I'm Thai</div>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+              earum esse ipsa doloremque aliquid aspernatur quaerat quia eos.
+              Ipsam ullam nihil veritatis deserunt dolorem quisquam molestiae,
+              rerum delectus itaque iusto.
+            </p>
+            <br />
+            <div class="text">Join Me!</div>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+              earum esse ipsa doloremque aliquid aspernatur quaerat quia eos.
+              Ipsam ullam nihil veritatis deserunt dolorem quisquam molestiae,
+              rerum delectus itaque iusto.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- education -->
+    <section class="education" id="education">
+      <div class="max-width">
+        <h2 class="title"><p>EDUCATION</p></h2>
+        <div class="section__skills">
+          <div class="left-content">
+            <div class="left-content-inner">
+              <div class="heading-education">
+                <h3>Education</h3>
+              </div>
+              <div class="timeline">
+                <div class="items-timeline">
+                  <p>2019-2023</p>
+                  <p>Student</p>
+                  <p>Secondary</p>
+                </div>
+                <div class="items-timeline">
+                  <p>2019-2023</p>
+                  <p class="center-item">Student</p>
+                  <p>Secondary</p>
+                </div>
+                <div class="items-timeline">
+                  <p>2019-2023</p>
+                  <p class="center-item">Infomation Technology</p>
+                  <p>Van Lang University</p>
+                </div>
+              </div>
+            </div>
+            <div class="right-content-inner">
+              <div class="heading-education">
+                <h3>Experience</h3>
+              </div>
+              <div class="timeline">
+                <div class="items-timeline">
+                  <p>9/2022-12/2022</p>
+                  <p>Intern QC</p>
+                  <p>Wata Solutions Company</p>
+                </div>
+                <div class="items-timeline">
+                  <p>3/2023-6/2023</p>
+                  <p class="center-item">Intern Frontend Engineering</p>
+                  <p>Aurora Tech</p>
+                </div>
+                <div class="items-timeline">
+                  <p>6/2023-12/2023</p>
+                  <p class="center-item">Frontend Engineering</p>
+                  <p>Aurora Tech</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-content">
+            <div class="skills">
+              <div class="skill-box">
+                <h4>HTML</h4>
+                <div class="progress-wrap">
+                  <span data-percent="80" class="progress-bar">
+                    <span class="tooltip">80%</span>
+                  </span>
+                </div>
+              </div>
+              <div class="skill-box">
+                <h4>CSS</h4>
+                <div class="progress-wrap">
+                  <span data-percent="75" class="progress-bar">
+                    <span class="tooltip">75%</span>
+                  </span>
+                </div>
+              </div>
+              <div class="skill-box">
+                <h4>BOOTSTRAP</h4>
+                <div class="progress-wrap">
+                  <span data-percent="60" class="progress-bar">
+                    <span class="tooltip">60%</span>
+                  </span>
+                </div>
+              </div>
+              <div class="skill-box">
+                <h4>JAVASCRIPTS</h4>
+                <div class="progress-wrap">
+                  <span data-percent="50" class="progress-bar">
+                    <span class="tooltip">50%</span>
+                  </span>
+                </div>
+              </div>
+              <div class="skill-box">
+                <h4>REACTJS</h4>
+                <div class="progress-wrap">
+                  <span data-percent="60" class="progress-bar">
+                    <span class="tooltip">60%</span>
+                  </span>
+                </div>
+              </div>
+              <div class="skill-box">
+                <h4>GIT</h4>
+                <div class="progress-wrap">
+                  <span data-percent="70" class="progress-bar">
+                    <span class="tooltip">70%</span>
+                  </span>
+                </div>
+              </div>
+              <div class="skill-box">
+                <h4>ENGLISH</h4>
+                <div class="progress-wrap">
+                  <span data-percent="40" class="progress-bar">
+                    <span class="tooltip">40%</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- project -->
+    <section class="project" id="project">
+      <div class="max-width">
+        <h2 class="title-project title"><p>MY PROJECTS</p></h2>
+        <div class="project-list">
+          <div class="work">
+            <img src="./asset/student-app.PNG" alt="image-managing-student" />
+            <div class="layer">
+              <h3>Managing Student Web</h3>
+              <p>
+                JS project on managing student information, grades, and
+                functions of adding, deleting, editing, etc. Working with
+                objects, functions
+              </p>
+              <a href="" data-title="student-project" onclick="showAddStdSec()"
+                ><i class="fa fa-external-link" aria-hidden="true"></i> Open
+                view</a
+              >
+            </div>
+          </div>
+          <div class="work">
+            <img src="./asset/cvc-app.PNG" alt="img-CVC-web" />
+            <div class="layer">
+              <h3>CVC Web</h3>
+              <p>
+                Sales website project for CVC company, providing the basic
+                functions of 1 sales website, using html, css, boostrap and
+                basic Javascripts to fetch api.
+              </p>
+              <a href="" data-title="cvc-project" onclick="showAddStdSec()"
+                ><i class="fa fa-external-link" aria-hidden="true"></i> Open
+                view</a
+              >
+            </div>
+          </div>
+          <div class="work">
+            <img src="./asset/homePage-shopee.PNG" alt="" />
+            <div class="layer">
+              <h3>Home Page Shopee</h3>
+              <p></p>
+              <a href="#" onclick="showAddStdSec()"
+                ><i class="fa fa-external-link" aria-hidden="true"></i> Open
+                view</a
+              >
+            </div>
+          </div>
+          <div class="work">
+            <img src="./asset/project-food-php.PNG" alt="" />
+            <div class="layer">
+              <h3>React JS</h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+                earum esse ipsa doloremque aliquid aspernatur quaerat quia eos.
+                Ipsam ullam nihil veritatis deserunt dolorem quisquam molestiae,
+                rerum delectus itaque iusto.
+              </p>
+              <a href="#" onclick="showAddStdSec()"
+                ><i class="fa fa-external-link" aria-hidden="true"></i> Open
+                view</a
+              >
+            </div>
+          </div>
+          <div class="work">
+            <img
+              src="https://images.pexels.com/photos/968639/pexels-photo-968639.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="" />
+            <div class="layer">
+              <h3>Tech app</h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+                earum esse ipsa doloremque aliquid aspernatur quaerat quia eos.
+                Ipsam ullam nihil veritatis deserunt dolorem quisquam molestiae,
+                rerum delectus itaque iusto.
+              </p>
+              <a href="#" onclick="showAddStdSec()"
+                ><i class="fa fa-external-link" aria-hidden="true"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img
+              src="https://images.pexels.com/photos/289927/pexels-photo-289927.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="" />
+            <div class="layer">
+              <h3>Coding app</h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+                earum esse ipsa doloremque aliquid aspernatur quaerat quia eos.
+                Ipsam ullam nihil veritatis deserunt dolorem quisquam molestiae,
+                rerum delectus itaque iusto.
+              </p>
+              <a href="#"
+                ><i class="fa fa-external-link" aria-hidden="true"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills" id="skills">
+      <div class="max-width">
+        <h2 class="title"><p>SKILLS</p></h2>
+        <div class="container-skills">
+          <div class="card-skill">
+            <img
+              src="https://bizflyportal.mediacdn.vn/thumb_wm/1000,100/bizflyportal/images/htm16157919239459.jpg"
+              alt="Card Image 3" />
+            <div class="card-skill-content">
+              <h2 class="card-skill-title">HTML</h2>
+              <p class="card-skill-description">
+                Xây dựng và chỉnh sửa các trang web một cách dễ dàng và chính
+                xác.Tạo ra giao diện trực quan và tương tác cho người dùng, đồng
+                thời cung cấp trải nghiệm web tốt nhất.
+              </p>
+            </div>
+          </div>
+          <div class="card-skill">
+            <img
+              src="https://res.cloudinary.com/cloudinary-marketing/images/w_1540,h_847/f_auto,q_auto/v1649718594/Web_Assets/blog/working_with_css_22218720ab/working_with_css_22218720ab-jpg?_i=AA"
+              alt="Card Image 3" />
+            <div class="card-skill-content">
+              <h2 class="card-skill-title">CSS</h2>
+              <p class="card-skill-description">
+                Tạo ra các trang web có giao diện đẹp mắt và tinh tế. CSS giúp
+                tôi điều chỉnh các phần tử trên trang web để đảm bảo chúng hiển
+                thị đồng nhất trên mọi thiết bị và trình duyệt, chỉnh giao diện
+                để phản ánh đúng nhất nội dung và mục tiêu của trang web.
+              </p>
+            </div>
+          </div>
+          <div class="card-skill">
+            <img
+              src="https://cafedev.vn/wp-content/uploads/2020/05/cafedevn-javascript.jpg"
+              alt="Card Image 3" />
+            <div class="card-skill-content">
+              <h2 class="card-skill-title">JavaScript</h2>
+              <p class="card-skill-description">
+                Tôi dùng thực JavaScript hiện các chức năng động như kiểm tra
+                biểu mẫu, thay đổi nội dung trang và tương tác với người dùng mà
+                không cần tải lại trang. Cho phép tôi xây dựng các ứng dụng web
+                phức tạp và đáp ứng nhanh chóng đến yêu cầu của người dùng.
+              </p>
+            </div>
+          </div>
+          <div class="card-skill">
+            <img
+              src="data:image/png;base64,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"
+              alt="Card Image 3" />
+            <div class="card-skill-content">
+              <h2 class="card-skill-title">Bootstrap</h2>
+              <p class="card-skill-description">
+                Bootstrap cung cấp một bộ công cụ và thành phần giao diện đã
+                được thiết kế trước,tích hợp responsive trang web giúp tôi tiết
+                kiệm thời gian và công sức trong quá trình phát triển.
+              </p>
+            </div>
+          </div>
+          <div class="card-skill">
+            <img
+              src="https://i.ytimg.com/vi/x0fSBAgBrOQ/maxresdefault.jpg"
+              alt="Card Image 3" />
+            <div class="card-skill-content">
+              <h2 class="card-skill-title">ReactJS</h2>
+              <p class="card-skill-description">
+                Phân chia giao diện thành các thành phần tái sử dụng, tăng tính
+                dễ bảo trì và mở rộng của dự án, tận dụng các tính năng như
+                routing,tương tác với api, quản lý trạng thái state và tương tác
+                người dùng một cách linh hoạt, hiệu quả.
+              </p>
+            </div>
+          </div>
+          <div class="card-skill">
+            <img
+              src="https://anhtester.com/uploads/lesson/selenium_java/git-blog-header.png"
+              alt="Card Image 3" />
+            <div class="card-skill-content">
+              <h2 class="card-skill-title">Git</h2>
+              <p class="card-skill-description">
+                Quản lý mã nguồn một cách hiệu quả và hợp tác với đồng nghiệp
+                trong quá trình phát triển phần mềm. Theo dõi lịch sử thay đổi,
+                quản lý các nhánh và hợp nhất mã nguồn một cách an toàn và dễ
+                dàng. Tôi sử dụng trong môi trường phát triển phân tán và triển
+                khai các dự án một cách linh hoạt và tự tin.
+              </p>
+            </div>
+          </div>
+          <div class="card-skill">
+            <img
+              src="https://cdn.sforum.vn/sforum/wp-content/uploads/2021/11/jira-social-@2x.png"
+              alt="Card Image 3" />
+            <div class="card-skill-content">
+              <h2 class="card-skill-title">Jira</h2>
+              <p class="card-skill-description">
+                chỉnh sửa và chia sẻ các thiết kế, từ concept đến bản hoàn
+                chỉnh. Kỹ năng này giúp tôi hiểu rõ hơn về quy trình thiết kế và
+                tăng cường sự hợp tác trong nhóm làm việc, từ đó cải thiện hiệu
+                suất và chất lượng sản phẩm.
+              </p>
+            </div>
+          </div>
+          <div class="card-skill">
+            <img
+              src="https://i.ytimg.com/vi/Cx2dkpBxst8/maxresdefault.jpg"
+              alt="Card Image 3" />
+            <div class="card-skill-content">
+              <h2 class="card-skill-title">Figma</h2>
+              <p class="card-skill-description">
+                Tôi chỉnh sửa và chia sẻ các thiết kế, từ concept đến bản hoàn
+                chỉnh. Kỹ năng này giúp tôi hiểu rõ hơn về quy trình thiết kế và
+                tăng cường sự hợp tác trong nhóm làm việc, từ đó cải thiện hiệu
+                suất và chất lượng sản phẩm.
+              </p>
+            </div>
+          </div>
+          <div class="card-skill">
+            <img
+              src="https://i.ytimg.com/vi/Cx2dkpBxst8/maxresdefault.jpg"
+              alt="Card Image 3" />
+            <div class="card-skill-content">
+              <h2 class="card-skill-title">Meadows</h2>
+              <p class="card-skill-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                facere esse consectetur..
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <span>
+        <a href="#"> Thai</a> | <span class="far fa-copyright"></span> 2024 All
+        Rights Reserved.
+      </span>
+    </footer>
+    <script src="https://kit.fontawesome.com/3b57a2a2a7.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
